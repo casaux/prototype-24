@@ -13,68 +13,7 @@
       <script type="text/javascript">
          /* page specific js */
          
-         $(document).ready(function() {
-			 
-			 
-			 
-		var country = window.location.hash.substr(1);
-		  if(country=="nz"){
-			  
-			  $("#select1block").val(9);
-			  $("#select1block").prop('disabled', true);
-			  
-			  
-		  }
-         
-         var dob;
-         var dobObject;
-         
-		  function leadingZero(number){
-			  
-			  if(number.length==1){
-				  return "0"+number;
-			  } else {
-				  return number;
-			  }
-			
-			  
-		  }
-		  
-         function getDOB(){
-         
-         if($("#text-input-block1").val().length==1){
-         $("#text-input-block1").val("0"+$("#text-input-block1").val());
-         }
-         
-         if($("#text-input-block2").val().length==1){
-         $("#text-input-block2").val("0"+$("#text-input-block2").val());
-         }
-         
-         
-         var DD = 	$("#text-input-block1").val();
-         var MM = 	$("#text-input-block2").val();
-         var YYYY = 	$("#text-input-block3").val();
-         
-         dob = DD+"/"+MM+"/"+YYYY;
-         	
-         dobObject = new Date(YYYY+"-"+MM+"-"+DD);
-			          
-         }
-         
-        $('#validate a').bind("click", function() {
-			 getDOB();
-
-
-			 var given_names = $("#given-name-input").val();
-			 var family_name = $("#family-name-input").val();
-			 var passport_number = $("#passport_number").val();
-
-			 output = "GivenName|" + given_names + ";FamilyName|" + family_name + ";PassportNo|" + passport_number + ";DateOfBirth|" + dob;
-				 console.log(output);
-
-				 return false;
-			});
-         });
+ 
       </script>
       <style type="text/css">
          /* page specific css */
